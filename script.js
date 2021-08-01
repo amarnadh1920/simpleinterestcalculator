@@ -18,16 +18,22 @@ function compute()
         document.getElementById("years").focus();
     }
     else{
-            var per = year + parseInt(period,10);
-            var amount_end=principle*year*interest_rate/100;
+            period=parseInt(period,10);
+            var amount_end = (principle * period * interest_rate / 100) * 12 ;
+            var per = year + period;
+
              var first_line="If you deposit " + principle + ",";
             var second_line="at an interest rate of " + interest_rate + ".";
             var third_line="You will receive an amount of " + amount_end + ",";
             var fourth_line="in the year " + per + ".";
+
             document.getElementById("line1").innerHTML=first_line;
             document.getElementById("line2").innerHTML=second_line;
             document.getElementById("line3").innerHTML=third_line;
             document.getElementById("line4").innerHTML=fourth_line;
+            console.log(principle);
+            console.log(interest_rate);
+            console.log(period);
         }
 }
 function updateTextInput(val) {
