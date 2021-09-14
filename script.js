@@ -19,7 +19,7 @@ function compute()
     }
     else{
             period=parseInt(period,10);
-            var amount_end = (principle * period * interest_rate / 100) * 12 ;
+            var amount_end = (principle * period * interest_rate / 100);
             var per = year + period;
 
              var first_line="If you deposit " + principle + ",";
