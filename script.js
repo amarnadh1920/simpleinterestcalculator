@@ -5,8 +5,8 @@ function compute()
     year = year.getFullYear();
     var interest_rate = document.getElementById("rate").value;
     var period = document.getElementById("years").value;
-    if(principle == ""){
-        alert("please enter principle amount");
+    if(principle == "" || principle == "0" || principle < 0){
+        alert("please enter principle amount as positive number ");
         document.getElementById("principal").focus();
         }
     else if(interest_rate == 0 || interest_rate == "0"){
